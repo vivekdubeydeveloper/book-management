@@ -1,0 +1,124 @@
+{
+	"variables": [],
+	"info": {
+		"name": "library",
+		"_postman_id": "f3103ab6-26e7-1306-ff54-8543ea37d5c2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getbooks",
+			"request": {
+				"url": "http://localhost:9090/books",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getauthors",
+			"request": {
+				"url": "http://localhost:9090/authors",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getbookbyname",
+			"request": {
+				"url": "http://localhost:9090/books/Rashmirathi",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addbook",
+			"request": {
+				"url": "http://localhost:9090/books",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"name\":\"Ode to Nightanlge\",\n\t\"author\":{\n\t\t\"name\":\"Keats\"\n\t\t\n\t}\n\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addauthor",
+			"request": {
+				"url": "http://localhost:9090/authors",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"name\":\"Milton\",\n\t\"books\":[\n\t\t{\n\t\t\t\"name\":\"Paradise Lost\"\n\t\t},\n\t\t\t{\n\t\t\t\"name\":\"Paradise Gain\"\n\t\t}\n\t\t\n\t\t]\n\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updatebook",
+			"request": {
+				"url": "http://localhost:9090/books",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 5,\n    \"name\": \"Gunaho Ke Devta\",\n    \"author\": {\n    \t\"id\":5,\n        \"name\": \"Dharamveer Bharti\"\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deletebook",
+			"request": {
+				"url": "http://localhost:9090/books/MyBook",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
